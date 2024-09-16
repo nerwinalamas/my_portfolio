@@ -26,8 +26,11 @@ import {
     figma,
     facebook,
     linkedin,
+    supabase,
+    vscode,
 } from "./assets/svgs";
 import {
+    paAppointment,
     adminDashboard,
     kanbanBoard,
     netflixClone,
@@ -136,6 +139,11 @@ export const skillsData: Skills[] = [
         icon: prisma,
     },
     {
+        id: "25",
+        title: "Supabase",
+        icon: supabase,
+    },
+    {
         id: "15",
         title: "MongoDB",
         icon: mongoDb,
@@ -181,6 +189,11 @@ export const skillsData: Skills[] = [
         icon: postman,
     },
     {
+        id: "26",
+        title: "VS Code",
+        icon: vscode,
+    },
+    {
         id: "24",
         title: "Figma",
         icon: figma,
@@ -189,7 +202,26 @@ export const skillsData: Skills[] = [
 
 export const projectsData: Projects[] = [
     {
-        id: "1",
+        id: "pa-Appointment",
+        name: "pa-Appointment",
+        description: "A web appointment system is a digital platform designed to streamline scheduling and managing appointments.",
+        email: "test@gmail.com",
+        password: "123456",
+        image: paAppointment,
+        repo: "https://github.com/nerwinalamas/pa-appointment",
+        demo: "https://pa-appointment.vercel.app/appointments",
+        techStack: [
+            "Next.js",
+            "TypeScript",
+            "Zustand",
+            "Zod",
+            "TailwindCSS",
+            "Shadcn-ui",
+            "Supabase",
+        ],
+    },
+    {
+        id: "Admin Dashboard",
         name: "Admin Dashboard",
         description:
             "A admin dashboard that provides analytics, user management, and various administrative tools for efficient management of web applications.",
@@ -208,7 +240,7 @@ export const projectsData: Projects[] = [
         ],
     },
     {
-        id: "2",
+        id: "Kanban Board",
         name: "Kanban Board",
         description:
             "A task management application that allows users to organize tasks into columns such as 'Pending', 'In Progress', 'Blocked', and 'Done', with drag-and-drop functionality",
@@ -225,7 +257,7 @@ export const projectsData: Projects[] = [
         ],
     },
     {
-        id: "3",
+        id: "Reinvent Instagram",
         name: "Reinvent Instagram",
         description:
             "A social media platform where users can create profiles, follow other users, and engage with content through likes and comments",
@@ -247,7 +279,7 @@ export const projectsData: Projects[] = [
         ],
     },
     {
-        id: "4",
+        id: "Video Search",
         name: "Video Search",
         description:
             "A video streaming platform that allows users to watch and search videos, with features like comments, like/unlike video, and related videos",
@@ -257,7 +289,7 @@ export const projectsData: Projects[] = [
         techStack: ["React", "TailwindCSS", "Youtube API"],
     },
     {
-        id: "5",
+        id: "3S",
         name: "3S",
         description:
             "An online store that enables users to browse and purchase products, with features like add to carts, search product and filter product.",
@@ -267,7 +299,7 @@ export const projectsData: Projects[] = [
         techStack: ["React", "TailwindCSS", "Fakestore API"],
     },
     {
-        id: "6",
+        id: "NetFlix Clone",
         name: "NetFlix Clone",
         description:
             "A UI implementation of a streaming service that offers a wide variety of TV shows, movies, and documentaries, designed to replicate the look and feel of Netflix",
@@ -314,4 +346,4 @@ export const contactData: Contacts[] = [
         link: "https://github.com/nerwinalamas",
         alt: "Nerwin's github profile",
     },
-]
+];

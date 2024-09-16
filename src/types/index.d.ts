@@ -7,7 +7,7 @@ export type Navbar = {
 export type Skills = {
     id: string;
     title: string;
-    icon: any;
+    icon: string;
 };
 
 export type Projects = {
@@ -18,13 +18,15 @@ export type Projects = {
     repo: string;
     demo: string;
     techStack: string[];
+    email?: string;
+    password?: string;
 };
 
 export type Services = string[];
 
 export type Contacts = {
     id: string;
-    icon: any;
+    icon: string;
     link: string;
     alt: string;
 };

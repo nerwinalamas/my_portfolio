@@ -37,6 +37,27 @@ const Projects = () => {
                                         {project.name}
                                     </h3>
                                     <p>{project.description}</p>
+                                    {project.email && project.password && (
+                                        <h4 className="font-semibold text-teal-500">
+                                            Login Credentials:
+                                        </h4>
+                                    )}
+                                    {project.email && (
+                                        <p>
+                                            Email:{" "}
+                                            <span className="font-bold">
+                                                {project.email}
+                                            </span>
+                                        </p>
+                                    )}
+                                    {project.password && (
+                                        <p>
+                                            Password:{" "}
+                                            <span className="font-bold">
+                                                {project.password}
+                                            </span>
+                                        </p>
+                                    )}
                                     <div className="flex flex-wrap gap-3">
                                         {project.techStack.map((tech) => (
                                             <Badge

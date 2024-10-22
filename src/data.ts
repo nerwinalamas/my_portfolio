@@ -209,7 +209,7 @@ export const projectsData: Projects[] = [
         password: "123456",
         image: paAppointment,
         repo: "https://github.com/nerwinalamas/pa-appointment",
-        demo: "https://pa-appointment.vercel.app/appointments",
+        demo: "https://pa-appointment.vercel.app/dashboard",
         techStack: [
             "Next.js",
             "TypeScript",

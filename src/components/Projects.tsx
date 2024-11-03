@@ -12,7 +12,7 @@ import {
 import { Button } from "./ui/button";
 import { ChevronDown, ChevronUp, ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, fadeInUp } from "../lib/animation";
+import { fadeIn, fadeInUp, fadeInWithExit } from "../lib/animation";
 
 const Projects = () => {
     const [expandedProjects, setExpandedProjects] = useState<
@@ -44,12 +44,16 @@ const Projects = () => {
                     </div>
                 </div>
                 <CarouselContent>
-                    {projectsData.map((project) => (
+                    {projectsData.map((project, index) => (
                         <CarouselItem
                             key={project.id}
                             className="md:basis-1/2 lg:basis-1/3"
                         >
-                            <div className="p-2 flex flex-col rounded-lg border border-slate-800 hover:bg-slate-800/50">
+                            <motion.div
+                                {...fadeInWithExit}
+                                transition={fadeInWithExit.transition(index)}
+                                className="p-2 flex flex-col rounded-lg border border-slate-800 hover:bg-slate-800/50"
+                            >
                                 <img
                                     src={project.image}
                                     alt={project.name}
@@ -151,7 +155,7 @@ const Projects = () => {
                                         </Button>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </CarouselItem>
                     ))}
                 </CarouselContent>

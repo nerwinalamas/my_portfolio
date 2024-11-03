@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Menu } from "lucide-react";
 import { navbarData } from "../data";
+import { handleScroll } from "../lib";
 
 const Navbar = () => {
     const [openSheet, setOpenSheet] = useState(false);
@@ -19,12 +20,20 @@ const Navbar = () => {
                     <SheetTrigger>
                         <Menu />
                     </SheetTrigger>
-                    <SheetContent side="left" className="flex items-center justify-center border-none bg-slate-900 text-slate-100">
+                    <SheetContent
+                        aria-describedby={undefined}
+                        side="left"
+                        className="flex items-center justify-center border-none bg-slate-900 text-slate-100"
+                    >
+                        <SheetTitle></SheetTitle>
                         <ul className="h-full w-full flex flex-col items-center justify-center gap-5">
                             {navbarData.map((data) => (
                                 <li
                                     key={data.id}
-                                    onClick={() => setOpenSheet(false)}
+                                    onClick={() => {
+                                        setOpenSheet(false);
+                                        handleScroll(data.path);
+                                    }}
                                     className="w-full text-center p-4"
                                 >
                                     <a href={data.path}>{data.title}</a>
@@ -32,7 +41,10 @@ const Navbar = () => {
                             ))}
                             <Link
                                 to="/"
-                                onClick={() => setOpenSheet(false)}
+                                onClick={() => {
+                                    setOpenSheet(false);
+                                    handleScroll("contacts");
+                                }}
                                 className="w-full text-center p-4"
                             >
                                 <button>Hire me</button>
@@ -43,12 +55,19 @@ const Navbar = () => {
             </div>
             <ul className="hidden lg:flex items-center justify-evenly gap-10">
                 {navbarData.map((data) => (
-                    <li key={data.id}>
-                        <a href={data.path}>{data.title}</a>
+                    <li
+                        key={data.id}
+                        onClick={() => handleScroll(data.path)}
+                        className="cursor-pointer hover:underline"
+                    >
+                        <a>{data.title}</a>
                     </li>
                 ))}
             </ul>
-            <a href="#contacts" className="hidden lg:flex lg:px-10 lg:py-2 lg:rounded-lg bg-slate-500">
+            <a
+                onClick={() => handleScroll("contacts")}
+                className="hidden lg:flex lg:px-10 lg:py-2 lg:rounded-lg bg-slate-500"
+            >
                 Hire me
             </a>
         </div>

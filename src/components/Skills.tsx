@@ -12,6 +12,11 @@ const Skills = () => {
             ? skillsData
             : skillsData.filter((skill) => skill.category === filter);
 
+    const handleTabs = (category: string) => {
+        setFilter("");
+        setTimeout(() => setFilter(category), 0);
+    };
+
     return (
         <motion.div
             id="skills"
@@ -30,33 +35,33 @@ const Skills = () => {
                     <TabsList className="h-max flex-wrap bg-slate-900">
                         <TabsTrigger
                             value="All"
-                            onClick={() => setFilter("All")}
+                            onClick={() => handleTabs("All")}
                         >
                             All
                         </TabsTrigger>
                         <TabsTrigger
                             value="frontend"
-                            onClick={() => setFilter("frontend")}
+                            onClick={() => handleTabs("frontend")}
                         >
                             Frontend
                         </TabsTrigger>
                         <TabsTrigger
                             value="backend"
-                            onClick={() => setFilter("backend")}
+                            onClick={() => handleTabs("backend")}
                         >
                             Backend
                         </TabsTrigger>
                         <TabsTrigger
                             value="state management & data handling"
                             onClick={() =>
-                                setFilter("state management & data handling")
+                                handleTabs("state management & data handling")
                             }
                         >
                             State Management & Data Handling
                         </TabsTrigger>
                         <TabsTrigger
                             value="development tools"
-                            onClick={() => setFilter("development tools")}
+                            onClick={() => handleTabs("development tools")}
                         >
                             Development Tools
                         </TabsTrigger>

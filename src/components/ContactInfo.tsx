@@ -1,16 +1,30 @@
-import { Mail, Phone } from "lucide-react";
-import { contactData } from "../data";
 import { Link } from "react-router-dom";
+import { Mail, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+import { contactData } from "../data";
+import { fadeIn, fadeInUp } from "../lib/animation";
 
 const ContactInfo = () => {
     return (
-        <div id="contacts" className="p-4 my-40 flex flex-col gap-10">
-            <h2 className="text-5xl font-bold md:text-center">
+        <motion.div
+            id="contacts"
+            {...fadeInUp}
+            className="p-4 my-40 flex flex-col gap-10"
+        >
+            <motion.h1
+                {...fadeIn}
+                transition={{ ...fadeIn.transition, delay: 0.2 }}
+                className="text-5xl font-bold md:text-center"
+            >
                 Let's build an awesome project together!
-            </h2>
+            </motion.h1>
             <div className="flex flex-col gap-5 md:flex-row md:justify-evenly">
                 <div className="flex flex-col gap-5">
-                    <div className="flex items-center gap-3">
+                    <motion.div
+                        {...fadeIn}
+                        transition={{ ...fadeIn.transition, delay: 0.2 }}
+                        className="flex items-center gap-3"
+                    >
                         <div className="p-3 rounded-full bg-slate-800">
                             <Mail />
                         </div>
@@ -20,8 +34,12 @@ const ContactInfo = () => {
                                 nerwinalamas@gmail.com
                             </h3>
                         </div>
-                    </div>
-                    <div className="flex items-center gap-3">
+                    </motion.div>
+                    <motion.div
+                        {...fadeIn}
+                        transition={{ ...fadeIn.transition, delay: 0.4 }}
+                        className="flex items-center gap-3"
+                    >
                         <div className="p-3 rounded-full bg-slate-800">
                             <Phone />
                         </div>
@@ -29,9 +47,13 @@ const ContactInfo = () => {
                             <p className="text-slate-400">Call me at</p>
                             <h3 className="font-semibold">+63 966 3609 104</h3>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className="flex flex-col gap-3">
+                <motion.div
+                    {...fadeIn}
+                    transition={{ ...fadeIn.transition, delay: 0.6 }}
+                    className="flex flex-col gap-3"
+                >
                     <h2 className="text-lg">Socials:</h2>
                     <div className="flex gap-5">
                         {contactData.map((contact) => (
@@ -49,9 +71,9 @@ const ContactInfo = () => {
                             </Link>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

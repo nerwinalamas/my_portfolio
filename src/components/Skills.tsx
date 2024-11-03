@@ -23,6 +23,7 @@ const Skills = () => {
             {...fadeInUp}
             className="p-4 my-40 flex flex-col gap-10"
         >
+            <div className="h-20 lg:hidden"></div>
             <div className="flex flex-col gap-5">
                 <motion.h1
                     {...fadeIn}

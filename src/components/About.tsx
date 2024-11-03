@@ -8,8 +8,9 @@ const About = () => {
         <motion.div
             id="about"
             {...fadeInUp}
-            className="px-4 py-20 flex flex-col items-center justify-center gap-4"
+            className="p-4 flex flex-col items-center justify-center gap-4 xl:py-20"
         >
+            <div className="h-20 lg:hidden"></div>
             <motion.h1
                 {...fadeIn}
                 transition={{ ...fadeIn.transition, delay: 0.2 }}

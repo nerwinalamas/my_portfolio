@@ -28,6 +28,7 @@ const Projects = () => {
 
     return (
         <motion.div id="projects" {...fadeInUp} className="p-4 my-40">
+            <div className="h-24 lg:hidden"></div>
             <Carousel className="w-full flex flex-col gap-10">
                 <div className="flex justify-between">
                     <motion.h1

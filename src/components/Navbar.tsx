@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Menu } from "lucide-react";
@@ -6,25 +6,10 @@ import { navbarData } from "../data";
 
 const Navbar = () => {
     const [openSheet, setOpenSheet] = useState(false);
-    const [isScrolling, setIsScrolling] = useState(false);
-
-    const navBackground = () => {
-        if (window.scrollY >= 90) {
-            setIsScrolling(true);
-        } else {
-            setIsScrolling(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", navBackground);
-    }, []);
 
     return (
         <div
-            className={`p-4 sticky z-10 top-0 w-full flex justify-between items-center lg:px-7 lg:justify-between ${
-                isScrolling ? "bg-slate-950 xl:top-3 xl:rounded-full" : ""
-            }`}
+            className={`p-4 sticky z-10 top-0 w-full flex justify-between items-center lg:px-7 lg:justify-between bg-gray-900`}
         >
             <Link to="/" className="text-xl font-bold">
                 Ner.dev
@@ -34,7 +19,7 @@ const Navbar = () => {
                     <SheetTrigger>
                         <Menu />
                     </SheetTrigger>
-                    <SheetContent className="flex items-center justify-center border-none bg-slate-900 text-slate-100">
+                    <SheetContent side="left" className="flex items-center justify-center border-none bg-slate-900 text-slate-100">
                         <ul className="h-full w-full flex flex-col items-center justify-center gap-5">
                             {navbarData.map((data) => (
                                 <li

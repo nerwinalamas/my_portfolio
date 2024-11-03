@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { navbarData } from "../data";
 import { fadeIn, fadeInWithExit } from "../lib/animation";
+import { handleScroll } from "../lib";
 
 const Footer = () => {
     return (
@@ -11,8 +12,10 @@ const Footer = () => {
                         key={data.id}
                         {...fadeInWithExit}
                         transition={fadeInWithExit.transition(index)}
+                        onClick={() => handleScroll(data.path)}
+                        className="cursor-pointer hover:underline"
                     >
-                        <a href={data.path}>{data.title}</a>
+                        <a>{data.title}</a>
                     </motion.li>
                 ))}
             </ul>

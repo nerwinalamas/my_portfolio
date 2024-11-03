@@ -4,6 +4,8 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Menu } from "lucide-react";
 import { navbarData } from "../data";
 import { handleScroll } from "../lib";
+import { motion } from "framer-motion";
+import { buttonVariants } from "../lib/animation";
 
 const Navbar = () => {
     const [openSheet, setOpenSheet] = useState(false);
@@ -64,12 +66,15 @@ const Navbar = () => {
                     </li>
                 ))}
             </ul>
-            <a
+            <motion.a
                 onClick={() => handleScroll("contacts")}
-                className="hidden lg:flex lg:px-10 lg:py-2 lg:rounded-lg bg-slate-500"
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
+                className="hidden lg:cursor-pointer lg:flex lg:px-10 lg:py-2 lg:rounded-lg bg-slate-500"
             >
                 Hire me
-            </a>
+            </motion.a>
         </div>
     );
 };

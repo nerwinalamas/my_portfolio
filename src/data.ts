@@ -43,27 +43,27 @@ export const navbarData: Navbar[] = [
     {
         id: "1",
         title: "Home",
-        path: "#home",
+        path: "home",
     },
     {
         id: "2",
         title: "About",
-        path: "#about",
+        path: "about",
     },
     {
         id: "3",
         title: "Skills",
-        path: "#skills",
+        path: "skills",
     },
     {
         id: "4",
         title: "Projects",
-        path: "#projects",
+        path: "projects",
     },
     {
         id: "5",
         title: "Services",
-        path: "#services",
+        path: "services",
     },
 ];
 

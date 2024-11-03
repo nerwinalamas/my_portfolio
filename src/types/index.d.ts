@@ -8,6 +8,7 @@ export type Skills = {
     id: string;
     title: string;
     icon: string;
+    category: string;
 };
 
 export type Projects = {

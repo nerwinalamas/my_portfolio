@@ -14,7 +14,7 @@ const Navbar = () => {
         <div
             className={`p-4 sticky z-10 top-0 w-full flex justify-between items-center lg:px-7 lg:justify-between bg-gray-900`}
         >
-            <Link to="/" className="text-xl font-bold">
+            <Link to="/" className="text-xl font-bold" title="Home">
                 Ner.dev
             </Link>
             <div className="lg:hidden">
@@ -38,7 +38,7 @@ const Navbar = () => {
                                     }}
                                     className="w-full text-center p-4"
                                 >
-                                    <a href={data.path}>{data.title}</a>
+                                    {data.title}
                                 </li>
                             ))}
                             <Link
@@ -48,6 +48,7 @@ const Navbar = () => {
                                     handleScroll("contacts");
                                 }}
                                 className="w-full text-center p-4"
+                                title="Hire me"
                             >
                                 <button>Hire me</button>
                             </Link>
@@ -62,7 +63,7 @@ const Navbar = () => {
                         onClick={() => handleScroll(data.path)}
                         className="cursor-pointer hover:underline"
                     >
-                        <a>{data.title}</a>
+                        {data.title}
                     </li>
                 ))}
             </ul>

@@ -25,13 +25,13 @@ const Skills = () => {
         >
             <div className="h-20 lg:hidden"></div>
             <div className="flex flex-col gap-5">
-                <motion.h1
+                <motion.h2
                     {...fadeIn}
                     transition={{ ...fadeIn.transition, delay: 0.2 }}
                     className="text-5xl font-bold"
                 >
                     Skills
-                </motion.h1>
+                </motion.h2>
                 <Tabs defaultValue="All" className="w-full">
                     <TabsList className="h-max flex-wrap bg-slate-900">
                         <TabsTrigger
@@ -81,6 +81,7 @@ const Skills = () => {
                             src={data.icon}
                             alt={data.title}
                             className="w-10 h-10"
+                            title={data.title}
                         />
                         <p className={`text-center text-xs`}>{data.title}</p>
                     </motion.div>

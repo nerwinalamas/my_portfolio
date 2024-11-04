@@ -11,13 +11,13 @@ const About = () => {
             className="p-4 flex flex-col items-center justify-center gap-4 xl:py-20"
         >
             <div className="h-20 lg:hidden"></div>
-            <motion.h1
+            <motion.h2
                 {...fadeIn}
                 transition={{ ...fadeIn.transition, delay: 0.2 }}
                 className="text-4xl font-bold"
             >
                 About me
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
                 {...fadeIn}
@@ -43,7 +43,7 @@ const About = () => {
                 className="flex gap-3"
             >
                 <Avatar>
-                    <AvatarImage src={id} alt="Nerwin Alamas" />
+                    <AvatarImage src={id} alt="Nerwin Alamas" title="Nerwin Alamas" />
                     <AvatarFallback>NA</AvatarFallback>
                 </Avatar>
 
@@ -51,7 +51,7 @@ const About = () => {
                     {...scaleIn}
                     transition={{ ...fadeIn.transition, delay: 0.8 }}
                 >
-                    <h2 className="text-lg font-semibold">Nerwin Alamas</h2>
+                    <p className="text-lg font-semibold">Nerwin Alamas</p>
                     <p className="text-gray-400">Frontend Developer</p>
                 </motion.div>
             </motion.div>

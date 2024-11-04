@@ -31,13 +31,13 @@ const Projects = () => {
             <div className="h-24 lg:hidden"></div>
             <Carousel className="w-full flex flex-col gap-10">
                 <div className="flex justify-between">
-                    <motion.h1
+                    <motion.h2
                         {...fadeIn}
                         transition={{ ...fadeIn.transition, delay: 0.2 }}
                         className="text-3xl lg:text-5xl font-bold"
                     >
                         Projects
-                    </motion.h1>
+                    </motion.h2>
                     <div className="flex gap-5">
                         <CarouselPrevious className="w-10 h-10 rounded-full" />
                         <CarouselNext className="w-10 h-10 rounded-full" />
@@ -58,6 +58,7 @@ const Projects = () => {
                                     src={project.image}
                                     alt={project.name}
                                     className="object-cover border rounded-lg border-slate-800/90"
+                                    title={project.name}
                                 />
                                 <div className="h-full flex flex-col gap-2 p-4">
                                     <h3 className="text-xl font-bold">
@@ -135,6 +136,7 @@ const Projects = () => {
                                             <Link
                                                 to={project.demo}
                                                 target="_blank"
+                                                title={project.name}
                                             >
                                                 <ExternalLink className="size-4" />
                                                 Demo
@@ -148,6 +150,7 @@ const Projects = () => {
                                             <Link
                                                 to={project.repo}
                                                 target="_blank"
+                                                title={project.name}
                                             >
                                                 <Github className="size-4" />
                                                 Repo

@@ -1,7 +1,7 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { id } from "../assets/images";
 import { motion } from "framer-motion";
 import { fadeIn, fadeInUp, scaleIn } from "../lib/animation";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const About = () => {
     return (
@@ -42,10 +42,13 @@ const About = () => {
                 transition={{ ...fadeIn.transition, delay: 0.6 }}
                 className="flex gap-3"
             >
-                <Avatar>
-                    <AvatarImage src={id} alt="Nerwin Alamas" title="Nerwin Alamas" />
-                    <AvatarFallback>NA</AvatarFallback>
-                </Avatar>
+                <LazyLoadImage
+                    src={id}
+                    alt="Nerwin Alamas"
+                    title="Nerwin Alamas"
+                    className="h-12 w-12 rounded-full object-cover"
+                    effect="blur"
+                />
 
                 <motion.div
                     {...scaleIn}

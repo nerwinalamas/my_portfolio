@@ -3,6 +3,7 @@ import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 import { motion } from "framer-motion";
 import { skillsData } from "../data";
 import { fadeIn, fadeInUp, fadeInWithExit } from "../lib/animation";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Skills = () => {
     const [filter, setFilter] = useState("All");
@@ -77,11 +78,12 @@ const Skills = () => {
                         transition={fadeInWithExit.transition(index)}
                         className="w-32 h-32 p-4 rounded-md flex flex-col items-center justify-center gap-5 bg-slate-800"
                     >
-                        <img
+                        <LazyLoadImage
                             src={data.icon}
                             alt={data.title}
                             className="w-10 h-10"
                             title={data.title}
+                            effect="blur"
                         />
                         <p className={`text-center text-xs`}>{data.title}</p>
                     </motion.div>

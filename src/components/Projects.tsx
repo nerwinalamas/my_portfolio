@@ -13,6 +13,7 @@ import { Button } from "./ui/button";
 import { ChevronDown, ChevronUp, ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn, fadeInUp, fadeInWithExit } from "../lib/animation";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Projects = () => {
     const [expandedProjects, setExpandedProjects] = useState<
@@ -54,11 +55,14 @@ const Projects = () => {
                                 transition={fadeInWithExit.transition(index)}
                                 className="p-2 flex flex-col rounded-lg border border-slate-800 hover:bg-slate-800/50"
                             >
-                                <img
+                                <LazyLoadImage
                                     src={project.image}
                                     alt={project.name}
                                     className="object-cover border rounded-lg border-slate-800/90"
                                     title={project.name}
+                                    width="640"
+                                    height="360"
+                                    effect="blur"
                                 />
                                 <div className="h-full flex flex-col gap-2 p-4">
                                     <h3 className="text-xl font-bold">

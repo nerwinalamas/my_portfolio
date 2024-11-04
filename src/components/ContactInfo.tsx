@@ -3,6 +3,7 @@ import { Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { contactData } from "../data";
 import { fadeIn, fadeInUp } from "../lib/animation";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ContactInfo = () => {
     return (
@@ -63,11 +64,12 @@ const ContactInfo = () => {
                                 target="_blank"
                                 title={contact.alt}
                             >
-                                <img
+                                <LazyLoadImage
                                     title={contact.alt}
                                     src={contact.icon}
                                     alt={contact.alt}
                                     className="w-11 h-11 cursor-pointer hover:scale-110 duration-300"
+                                    effect="blur"
                                 />
                             </Link>
                         ))}

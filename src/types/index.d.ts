@@ -4,11 +4,18 @@ export type Navbar = {
     path: string;
 };
 
+export type SkillCategory = 
+    | 'frontend'
+    | 'backend'
+    | 'state management & data handling'
+    | 'development tools'
+    | string;
+
 export type Skills = {
     id: string;
     title: string;
     icon: string;
-    category: string;
+    category: SkillCategory
 };
 
 export type Projects = {

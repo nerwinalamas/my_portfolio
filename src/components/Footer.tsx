@@ -15,7 +15,7 @@ const Footer = () => {
                         onClick={() => handleScroll(data.path)}
                         className="cursor-pointer hover:underline"
                     >
-                        <a>{data.title}</a>
+                        {data.title}
                     </motion.li>
                 ))}
             </ul>

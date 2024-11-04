@@ -10,13 +10,13 @@ const Services = () => {
             className="p-4 my-40 flex flex-col gap-5"
         >
             <div className="h-20 lg:hidden"></div>
-            <motion.h1
+            <motion.h2
                 {...fadeIn}
                 transition={{ ...fadeIn.transition, delay: 0.2 }}
                 className="text-5xl font-bold"
             >
                 Services
-            </motion.h1>
+            </motion.h2>
             <motion.p
                 {...fadeIn}
                 transition={{ ...fadeIn.transition, delay: 0.4 }}

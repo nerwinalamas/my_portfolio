@@ -31,12 +31,12 @@ const Hero = () => {
                 >
                     Nerwin Alamas
                 </motion.h1>
-                <motion.h2
+                <motion.p
                     className="my-2 text-3xl font-bold md:text-4xl lg:text-6xl"
                     variants={itemVariants}
                 >
                     Frontend Developer
-                </motion.h2>
+                </motion.p>
                 <motion.p
                     className="md:text-center md:w-3/4 lg:w-4/5 xl:w-3/5 xl:text-start"
                     variants={itemVariants}

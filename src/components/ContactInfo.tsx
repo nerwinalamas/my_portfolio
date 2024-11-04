@@ -11,13 +11,13 @@ const ContactInfo = () => {
             {...fadeInUp}
             className="p-4 my-40 flex flex-col gap-10"
         >
-            <motion.h1
+            <motion.h2
                 {...fadeIn}
                 transition={{ ...fadeIn.transition, delay: 0.2 }}
                 className="text-5xl font-bold md:text-center"
             >
                 Let's build an awesome project together!
-            </motion.h1>
+            </motion.h2>
             <div className="flex flex-col gap-5 md:flex-row md:justify-evenly">
                 <div className="flex flex-col gap-5">
                     <motion.div
@@ -30,9 +30,9 @@ const ContactInfo = () => {
                         </div>
                         <div className="text-start">
                             <p className="text-slate-400">Email me at</p>
-                            <h3 className="font-semibold">
+                            <p className="font-semibold">
                                 nerwinalamas@gmail.com
-                            </h3>
+                            </p>
                         </div>
                     </motion.div>
                     <motion.div
@@ -45,7 +45,7 @@ const ContactInfo = () => {
                         </div>
                         <div className="text-start">
                             <p className="text-slate-400">Call me at</p>
-                            <h3 className="font-semibold">+63 966 3609 104</h3>
+                            <p className="font-semibold">+63 966 3609 104</p>
                         </div>
                     </motion.div>
                 </div>
@@ -61,6 +61,7 @@ const ContactInfo = () => {
                                 key={contact.id}
                                 to={contact.link}
                                 target="_blank"
+                                title={contact.alt}
                             >
                                 <img
                                     title={contact.alt}

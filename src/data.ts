@@ -351,6 +351,7 @@ export const servicesData: Services = [
     "Code Reviews and Collaboration",
     "Testing and Debugging",
     "Deployment and Maintenance",
+    "Internationalization (i18n)"
 ];
 
 export const contactData: Contacts[] = [

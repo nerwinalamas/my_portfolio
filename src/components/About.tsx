@@ -24,7 +24,7 @@ const About = () => {
                 transition={{ ...fadeIn.transition, delay: 0.4 }}
                 className="max-w-2xl text-center text-gray-300"
             >
-                Hello! I'm Nerwin Alamas, a passionate Frontend Developer. I
+                Hello! I'm Nerwin Alamas, a passionate Full Stack Developer. I
                 specialize in creating responsive, and user-friendly web
                 applications. My expertise lies in turning complex problems into
                 simple, elegant solutions, and I thrive on challenges that push
@@ -55,7 +55,7 @@ const About = () => {
                     transition={{ ...fadeIn.transition, delay: 0.8 }}
                 >
                     <p className="text-lg font-semibold">Nerwin Alamas</p>
-                    <p className="text-gray-400">Frontend Developer</p>
+                    <p className="text-gray-400">Full Stack Developer</p>
                 </motion.div>
             </motion.div>
         </motion.div>

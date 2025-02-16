@@ -23,7 +23,7 @@ const Footer = () => {
                 {...fadeIn}
                 transition={{ ...fadeIn.transition, delay: 0.2 }}
             >
-                &copy; 2024 Nerwin Alamas. All rights reserved.
+                &copy; 2025 Nerwin Alamas. All rights reserved.
             </motion.p>
         </div>
     );

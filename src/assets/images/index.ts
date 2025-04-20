@@ -6,6 +6,7 @@ import videoSearch from "./video_search.png"
 import threeS from "./3s.png"
 import netflixClone from "./netflix_clone.png"
 import id from "./id.png"
+import flowboard from "./flowboard.png"
 
 export {
     paAppointment,
@@ -15,5 +16,6 @@ export {
     videoSearch,
     threeS,
     netflixClone,
-    id
+    id,
+    flowboard,
 }

@@ -32,11 +32,12 @@ import {
 import {
     paAppointment,
     adminDashboard,
-    kanbanBoard,
+    // kanbanBoard,
     netflixClone,
     reinventInstagram,
     threeS,
     videoSearch,
+    flowboard
 } from "./assets/images";
 
 export const navbarData: Navbar[] = [
@@ -228,6 +229,24 @@ export const skillsData: Skills[] = [
 
 export const projectsData: Projects[] = [
     {
+        id: "FlowBoard",
+        name: "FlowBoard",
+        description: "A sleek Kanban-style project management tool that helps users visualize and track tasks across different stages.",
+        image: flowboard,
+        repo: "https://github.com/nerwinalamas/flowboard",
+        demo: "https://flowboard-xi.vercel.app/",
+        techStack: [
+            "Next.js",
+            "TypeScript",
+            "DND-kit",
+            "Zustand",
+            "Zod",
+            "React hook form",
+            "TailwindCSS",
+            "Shadcn-ui",
+        ],
+    },
+    {
         id: "pa-Appointment",
         name: "pa-Appointment",
         description: "A web appointment system is a digital platform designed to streamline scheduling and managing appointments.",
@@ -265,23 +284,23 @@ export const projectsData: Projects[] = [
             "Shadcn-ui",
         ],
     },
-    {
-        id: "Kanban Board",
-        name: "Kanban Board",
-        description:
-            "A task management application that allows users to organize tasks into columns such as 'Pending', 'In Progress', 'Blocked', and 'Done', with drag-and-drop functionality",
-        image: kanbanBoard,
-        repo: "https://github.com/nerwinalamas/kanban_board_fe",
-        demo: "https://kanban-board-fe.pages.dev/",
-        techStack: [
-            "React",
-            "TypeScript",
-            "Zustand",
-            "DND-kit",
-            "TailwindCSS",
-            "Shadcn-ui",
-        ],
-    },
+    // {
+    //     id: "Kanban Board",
+    //     name: "Kanban Board",
+    //     description:
+    //         "A task management application that allows users to organize tasks into columns such as 'Pending', 'In Progress', 'Blocked', and 'Done', with drag-and-drop functionality",
+    //     image: kanbanBoard,
+    //     repo: "https://github.com/nerwinalamas/kanban_board_fe",
+    //     demo: "https://kanban-board-fe.pages.dev/",
+    //     techStack: [
+    //         "React",
+    //         "TypeScript",
+    //         "Zustand",
+    //         "DND-kit",
+    //         "TailwindCSS",
+    //         "Shadcn-ui",
+    //     ],
+    // },
     {
         id: "Reinvent Instagram",
         name: "Reinvent Instagram",

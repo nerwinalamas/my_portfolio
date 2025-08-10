@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 import { skillsData } from "../data";
 import { fadeIn, fadeInUp, fadeInWithExit } from "../lib/animation";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { SkillCategory } from "../types";
 
 const Skills = () => {
-    const [filter, setFilter] = useState("All");
+   const [filter, setFilter] = useState<SkillCategory | "All">("All");
 
     const filteredProjects =
         filter === "All"
             ? skillsData
             : skillsData.filter((skill) => skill.category === filter);
 
-    const handleTabs = (category: string) => {
-        setFilter("");
-        setTimeout(() => setFilter(category), 0);
+    const handleTabs = (category: SkillCategory | "All") => {
+        setFilter(category);
     };
 
     return (
@@ -52,6 +52,12 @@ const Skills = () => {
                             onClick={() => handleTabs("backend")}
                         >
                             Backend
+                        </TabsTrigger>
+                        <TabsTrigger
+                            value="mobile"
+                            onClick={() => handleTabs("mobile")}
+                        >
+                            Mobile
                         </TabsTrigger>
                         <TabsTrigger
                             value="state management & data handling"

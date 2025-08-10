@@ -29,6 +29,9 @@ import figma from "./figma.svg";
 import vscode from "./vscode.svg";
 import facebook from "./facebook.svg"
 import linkedin from "./linkedin.svg"
+import reactNative from "./reactNative.svg"
+import expo from "./expo.svg"
+import nativewind from "./nativewind.svg"
 
 export {
     html,
@@ -61,5 +64,8 @@ export {
     figma,
     vscode,
     facebook,
-    linkedin
+    linkedin,
+    reactNative,
+    expo,
+    nativewind,
 };

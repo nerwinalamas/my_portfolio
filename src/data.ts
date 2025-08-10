@@ -28,12 +28,15 @@ import {
     linkedin,
     supabase,
     vscode,
+    reactNative,
+    expo,
+    nativewind
 } from "./assets/svgs";
 import {
     paAppointment,
     adminDashboard,
     // kanbanBoard,
-    netflixClone,
+    // netflixClone,
     reinventInstagram,
     threeS,
     videoSearch,
@@ -154,12 +157,6 @@ export const skillsData: Skills[] = [
         category: "state management & data handling",
     },
     {
-        id: "25",
-        title: "Supabase",
-        icon: supabase,
-        category: "state management & data handling",
-    },
-    {
         id: "15",
         title: "MongoDB",
         icon: mongoDb,
@@ -213,6 +210,18 @@ export const skillsData: Skills[] = [
         icon: postman,
         category: "development tools",
     },
+        {
+        id: "24",
+        title: "Figma",
+        icon: figma,
+        category: "development tools",
+    },
+        {
+        id: "25",
+        title: "Supabase",
+        icon: supabase,
+        category: "state management & data handling",
+    },
     {
         id: "26",
         title: "VS Code",
@@ -220,10 +229,22 @@ export const skillsData: Skills[] = [
         category: "development tools",
     },
     {
-        id: "24",
-        title: "Figma",
-        icon: figma,
-        category: "development tools",
+        id: "27",
+        title: "React Native",
+        icon: reactNative,
+        category: "mobile",
+    },
+    {
+        id: "28",
+        title: "Expo",
+        icon: expo,
+        category: "mobile",
+    },
+    {
+        id: "29",
+        title: "NativeWind",
+        icon: nativewind,
+        category: "mobile",
     },
 ];
 
@@ -343,16 +364,16 @@ export const projectsData: Projects[] = [
         demo: "https://3s-phi.vercel.app/",
         techStack: ["React", "TailwindCSS", "Fakestore API"],
     },
-    {
-        id: "NetFlix Clone",
-        name: "NetFlix Clone",
-        description:
-            "A UI implementation of a streaming service that offers a wide variety of TV shows, movies, and documentaries, designed to replicate the look and feel of Netflix",
-        image: netflixClone,
-        repo: "https://github.com/nerwinalamas/Netflix-Clone",
-        demo: "https://netflix-clone-iota-silk.vercel.app/",
-        techStack: ["React", "CSS", "TMDB API"],
-    },
+    // {
+    //     id: "NetFlix Clone",
+    //     name: "NetFlix Clone",
+    //     description:
+    //         "A UI implementation of a streaming service that offers a wide variety of TV shows, movies, and documentaries, designed to replicate the look and feel of Netflix",
+    //     image: netflixClone,
+    //     repo: "https://github.com/nerwinalamas/Netflix-Clone",
+    //     demo: "https://netflix-clone-iota-silk.vercel.app/",
+    //     techStack: ["React", "CSS", "TMDB API"],
+    // },
 ];
 
 export const servicesData: Services = [

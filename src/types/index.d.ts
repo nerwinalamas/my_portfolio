@@ -7,9 +7,9 @@ export type Navbar = {
 export type SkillCategory = 
     | 'frontend'
     | 'backend'
+    | 'mobile'
     | 'state management & data handling'
-    | 'development tools'
-    | string;
+    | 'development tools';
 
 export type Skills = {
     id: string;

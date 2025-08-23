@@ -7,6 +7,7 @@ import threeS from "./3s.png"
 import netflixClone from "./netflix_clone.png"
 import id from "./id.png"
 import flowboard from "./flowboard.png"
+import theNearestThrone from "./the_nearest_throne.png"
 
 export {
     paAppointment,
@@ -18,4 +19,5 @@ export {
     netflixClone,
     id,
     flowboard,
+    theNearestThrone,
 }

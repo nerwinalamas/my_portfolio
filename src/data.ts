@@ -40,7 +40,8 @@ import {
     reinventInstagram,
     threeS,
     videoSearch,
-    flowboard
+    flowboard,
+    theNearestThrone
 } from "./assets/images";
 
 export const navbarData: Navbar[] = [
@@ -249,6 +250,24 @@ export const skillsData: Skills[] = [
 ];
 
 export const projectsData: Projects[] = [
+    {
+        id: "TheNearestThrone",
+        name: "TheNearestThrone 🚽",
+        description: "A comprehensive restroom finder application for the Philippines, helping users locate the nearest public toilets with detailed information.",
+        image: theNearestThrone,
+        repo: "https://github.com/nerwinalamas/the-nearest-throne",
+        demo: "https://the-nearest-throne.vercel.app/",
+        techStack: [
+            "Next.js",
+            "Leaflet",
+            "TypeScript",
+            "Zustand",
+            "Zod",
+            "React hook form",
+            "TailwindCSS",
+            "Shadcn-ui",
+        ],
+    },
     {
         id: "FlowBoard",
         name: "FlowBoard",

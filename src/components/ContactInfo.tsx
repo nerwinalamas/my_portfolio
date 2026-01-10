@@ -78,7 +78,7 @@ const ContactInfo = () => {
             <div className="text-start">
               <p className="text-slate-400">Call me at</p>
               <div className="flex items-center gap-2 relative">
-                <p className="font-semibold">+639663609104</p>
+                <p className="font-semibold">+639622981276</p>
                 <div className="relative">
                   {copiedItems.phone ? (
                     <div className="absolute -top-8 -left-2 bg-slate-800 text-white text-xs py-1 px-2 rounded">
@@ -89,7 +89,7 @@ const ContactInfo = () => {
                     <Check className="w-4 h-4 text-slate-500" />
                   ) : (
                     <Copy
-                      onClick={() => handleCopy("phone", "+639663609104")}
+                      onClick={() => handleCopy("phone", "+639622981276")}
                       className="w-4 h-4 hover:cursor-pointer hover:text-slate-500 transition-colors"
                     />
                   )}
